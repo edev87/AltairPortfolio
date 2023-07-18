@@ -511,7 +511,7 @@ section {
 }
 
 .section-page:nth-child(even),
-.section-page:nth-child(even)>.container::after {
+.section-page:nth-child(even)>.container::after { /** Divier colors **/
   background-color: var(--ed-theme-100);
 }
 

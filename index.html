@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/icon-card.css">
   <link rel="stylesheet" href="/css/hover-card.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/blog-card.css">
+  <link rel="stylesheet" href="/css/menu-pill.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -38,13 +41,84 @@
 <body data-ed-theme="red">
 
 
+  <div id="menu-pill-container" class="navbar navbar-dark ">
+    <nav id="menu-pill" class="navbar-nav text-light">
+      <div class="nav-item">
+        <a href="#home" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home"
+          data-bs-custom-class="nav-tooltip">
+          <div class="icon-container">
+            <i class="bi bi-house-fill"></i>
+          </div>
+          <span class="menu-label">Home</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#about" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="About Me"
+          data-bs-custom-class="nav-tooltip">
+          <div class="icon-container">
+            <i class="bi bi-info-circle-fill"></i>
+          </div>
+          <span class="menu-label">About Me</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#skills" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Skills"
+          data-bs-custom-class="nav-tooltip">
+          <div class="icon-container">
+            <i class="bi bi-wrench-adjustable"></i>
+          </div>
+          <span class="menu-label">Skills</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#projects" class="nav-link" data-bs-toggle="tooltip" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="Projects" data-bs-custom-class="nav-tooltip">
+          <div class="icon-container">
+            <i class="bi bi-braces-asterisk"></i>
+          </div>
+          <span class="menu-label">Projects</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#challenges" class="nav-link" data-bs-toggle="tooltip" data-bs-title="Challenges"
+          data-bs-custom-class="nav-tooltip" data-bs-placement="bottom">
+          <div class="icon-container">
+            <i class="bi bi-terminal"></i>
+          </div>
+          <span class="menu-label">Challenges</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#blog" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Blog"
+          data-bs-custom-class="nav-tooltip">
+          <div class="icon-container">
+            <i class="bi bi-quote"></i>
+          </div>
+          <span class="menu-label">Blog</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#contact" class="nav-link" data-bs-title="Contact" data-bs-custom-class="nav-tooltip"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Contact">
+          <div class="icon-container">
+            <i class="bi bi-envelope-at-fill"></i>
+          </div>
+          <span class="menu-label">Contact</span>
+        </a>
+      </div>
+    </nav>
+  </div>
 
-
-  <main>
+  <main data-bs-spy="scroll" data-bs-target="#menu-pill">
+    <!-- HOME SECTION -->
     <section id="home" class="section-page">
       <div id="home-cover">
         <div class="main-header">
-          <div class="main-title">
+          <div class="d-flex align-items-center justify-content-center">
+            <span> <img src="/img/logos/9.png" alt="" class="main-logo"></span>
+          </div>
+          <!-- <span> <img src="/img/logos/9.png" alt="" class="main-logo"></span> -->
+          <!-- <div class="main-title">
             Ernest
             <span> <img src="/img/Untitled design.png" alt="" class="main-logo"></span>
           </div>
@@ -53,7 +127,7 @@
           </div>
           <div class="subtitle">
             Software Developer
-          </div>
+          </div> -->
           <a class="btn btn-primary mt-3 w-100" href="#contact">Contact Me</a>
         </div>
       </div>
@@ -61,6 +135,9 @@
 
 
     </section>
+    <!-- HOME SECTION -->
+
+    <!-- ABOUT SECTION -->
     <section id="about" class="section-page">
       <div class="container text-center">
         <h2 class="display-1 mb-5">About Me</h2>
@@ -85,6 +162,9 @@
       </div>
 
     </section>
+    <!-- ABOUT SECTION -->
+
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section-page">
       <div class="container">
         <h2 class="text-center display-1 mb-5"> What I Use</h2>
@@ -194,9 +274,12 @@
 
 
     </section>
+    <!-- SKILLS SECTION -->
+
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section-page">
       <div class="container">
-        <h2 class="text display-1 mb-5">Projects</h2>
+        <h2 class="text-center display-1 mb-5">Projects</h2>
         <p class="my-5">
           Showcasing complete function projects demonstrates what I can bring to your project.
           I built these projects from the ground up to demonstate skill wiith front-end,
@@ -252,9 +335,12 @@
         </div>
       </div>
     </section>
+    <!-- PROJECTS SECTION -->
+
+    <!-- CHALLENGES SECTION -->
     <section id="challenges" class="section-page">
       <div class="container">
-        <h2 class="text display-1 mb-5">Challenges</h2>
+        <h2 class="text-center display-1 mb-5">Challenges</h2>
         <p class="my-5">
           Showcasing complete function projects demonstrates what I can bring to your project.
           I built these projects from the ground up to demonstate skill wiith front-end,
@@ -345,20 +431,223 @@
         </div>
       </div>
     </section>
+    <!-- CHALLENGES SECTION -->
+
+    <!-- BLOG SECTION -->
     <section id="blog" class="section-page">
-      <h2>Blog</h2>
+      <div class="container">
+        <h2 class="display-1 m-5 text-center"> Blog</h2>
+        <p>
+          I write on my blog on a regular basis. I think its important to share your knowledge with others.
+        </p>
+        <div id="blogs">
+          <!-- 1st Col -->
+          <article class="card mb-4 blog-article">
+            <div class="row blog-row g-0">
+              <!-- 1st Col -->
+              <div class=" blog-header col-lg-4">
+                <!-- Blog Image -->
+                <a href="#" class="blog-image-link">
+                  <img src="/img/blog/Blog_FlyingGirl.jpg" class="blog-image" alt="Blog post image">
+                </a>
+                <div class="blog-date">
+                  <div class="blog-day">11</div>
+                  <div class="blog-month">JANUARY</div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <!-- Title & Text Preview -->
+                <div class="card-body h-100 d-flex flex-column justify-content-around">
+                  <h3 class="card-title">MAKE SQL QUERIES FLY</h3>
+                  <p class="card-text line-clamp">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cupiditate
+                    numquam placeat esse officia iure commodi perferendis eum dolorem, aspernatur
+                    distinctio ipsam tempore repudiandae veritatis reiciendis nesciunt incidunt excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, id laborum tempora
+                    explicabo voluptate enim. Dolores accusamus impedit incidunt odit, ratione sunt
+                    provident excepturi quas fugit fugiat repellendus nobis.
+                  </p>
+                  <div><a href="#" class="btn btn-primary">Read More</a></div>
+                  <p class="card-text"><small class="text-muted">Published 3 days ago</small></p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 1st Col -->
+
+          <!-- 2nd Col -->
+          <article class="card mb-4 blog-article">
+            <div class="row blog-row g-0">
+              <div class=" blog-header col-lg-4">
+                <!-- Blog Image -->
+                <a href="#" class="blog-image-link ">
+                  <img src="/img/blog/Blog_Database.jpg" class="blog-image" alt="Blog post image">
+                </a>
+                <div class="blog-date">
+                  <div class="blog-day">12</div>
+                  <div class="blog-month">FEBURARY</div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <!-- Title & Text Preview -->
+                <div class="card-body h-100 d-flex flex-column justify-content-around">
+                  <h3 class="card-title">MAKE SQL QUERIES FLY</h3>
+                  <p class="card-text line-clamp">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cupiditate
+                    numquam placeat esse officia iure commodi perferendis eum dolorem, aspernatur
+                    distinctio ipsam tempore repudiandae veritatis reiciendis nesciunt incidunt excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, id laborum tempora
+                    explicabo voluptate enim. Dolores accusamus impedit incidunt odit, ratione sunt
+                    provident excepturi quas fugit fugiat repellendus nobis.
+                  </p>
+                  <div><a href="#" class="btn btn-primary">Read More</a></div>
+                  <p class="card-text"><small class="text-muted">Published 3 days ago</small></p>
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Col -->
+
+          </article>
+          <!-- 2nd Col -->
+
+          <!-- 3rd Col -->
+          <article class="card mb-4 blog-article">
+            <!-- 3rd Col -->
+            <div class="row blog-row g-0">
+              <div class=" blog-header col-lg-4">
+                <!-- Blog Image -->
+                <a href="#" class="blog-image-link">
+                  <img src="/img/blog/Blog_CodeTag.jpg" class="blog-image" alt="Blog post image">
+                </a>
+                <div class="blog-date">
+                  <div class="blog-day">13</div>
+                  <div class="blog-month">MARCH</div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <!-- Title & Text Preview -->
+                <div class="card-body h-100 d-flex flex-column justify-content-around">
+                  <h3 class="card-title">MAKE SQL QUERIES FLY</h3>
+                  <p class="card-text line-clamp">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cupiditate
+                    numquam placeat esse officia iure commodi perferendis eum dolorem, aspernatur
+                    distinctio ipsam tempore repudiandae veritatis reiciendis nesciunt incidunt excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, id laborum tempora
+                    explicabo voluptate enim. Dolores accusamus impedit incidunt odit, ratione sunt
+                    provident excepturi quas fugit fugiat repellendus nobis.
+                  </p>
+                  <div><a href="#" class="btn btn-primary">Read More</a></div>
+                  <p class="card-text"><small class="text-muted">Published 3 days ago</small></p>
+                </div>
+              </div>
+            </div>
+            <!-- 3rd Col -->
+          </article>
+          <!-- 3rd Col -->
+
+
+          <!-- 4th Col -->
+          <article class="card mb-4 blog-article">
+            <div class="row blog-row g-0">
+
+              <div class=" blog-header col-lg-4">
+                <!-- Blog Image -->
+                <a href="#" class="blog-image-link">
+                  <img src="/img/blog/Blog_DecisionRoad.jpg" class="blog-image" alt="Blog post image">
+                </a>
+                <div class="blog-date">
+                  <div class="blog-day">14</div>
+                  <div class="blog-month">APRIL</div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <!-- Title & Text Preview -->
+                <div class="card-body h-100 d-flex flex-column justify-content-around">
+                  <h3 class="card-title">SPA VS MPA FRAMEWORKS</h3>
+                  <p class="card-text line-clamp">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos cupiditate
+                    numquam placeat esse officia iure commodi perferendis eum dolorem, aspernatur
+                    distinctio ipsam tempore repudiandae veritatis reiciendis nesciunt incidunt excepturi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, id laborum tempora
+                    explicabo voluptate enim. Dolores accusamus impedit incidunt odit, ratione sunt
+                    provident excepturi quas fugit fugiat repellendus nobis.
+                  </p>
+                  <div><a href="#" class="btn btn-primary">Read More</a></div>
+                  <p class="card-text"><small class="text-muted">Published 3 days ago</small></p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 4th Col -->
+
+
+
+        </div>
+        </article>
+      </div>
+      </div>
     </section>
+    <!-- BLOG SECTION -->
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section-page">
-      <h2>Contact Me</h2>
+      <!-- FORM -->
+      <div class="container">
+        <h1 class="text-center text-light pt-2">Contact Me</h1>
+        <div class="bg-light p-3 border border-2 border-info shadow-lg">
+          <form action="#">
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="col ">
+                <label for="First Name" class="form-label">First Name</label>
+                <input class="form-control" type="text" name="FirstName" id="FirstName" placeholder="First Name"
+                  aria-label="First Name" required>
+              </div>
+              <div class="col ">
+                <label for="Last Name">Last Name</label>
+                <input class="form-control" type="text" name="Last Name" id="" placeholder="Last Name"
+                  aria-lable="Last Name" required>
+              </div>
+              <div class="col ">
+                <label for="Email">Email</label>
+                <input class="form-control" type="email" name="Email" id="" placeholder="Email" aria-lable="Email"
+                  required>
+              </div>
+              <div class="col ">
+                <label for="Phone">Phone (optional)</label>
+                <input class="form-control" type="tel" name="Phone" id="Phone" placeholder="Phone" aria-lable="Phone">
+              </div>
+              <div class="col col-md-12">
+                <label for="Phone">Subject</label>
+                <input class="form-control" type="text" name="Subject" id="Subject" placeholder="Subject"
+                  aria-lable="Subject" required>
+              </div>
+              <div class="col col-md-12">
+                <label for="Message">Message</label>
+                <textarea class="form-control" type="text" name="Message" id="Message" placeholder="Message"
+                  aria-lable="Message" required> </textarea>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <!-- FORM -->
     </section>
+    <!-- CONTACT SECTION -->
 
   </main>
 
+  <!-- FOOTER SECTION -->
   <footer class="py-3 fixed-bottom" data-bs-theme="dark">
     <div class="container-fluid">
       <div class="row align-items-center g-3">
         <div class="col-3 col-lg-3">
-          <img src="img/Untitled design.png" height="40" alt="Logo" />
+          <img src="img/logos/10.png" height="100" alt="Logo" />
 
         </div>
         <div class="col-9 col-lg-6 d-flex justify-content-end justify-content-lg-center">
@@ -383,8 +672,8 @@
         </div>
       </div>
     </div>
-
   </footer>
+  <!-- FOOTER SECTION -->
 
   <!-- MODALS -->
 

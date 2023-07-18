@@ -1,0 +1,121 @@
+#menu-pill-container {
+  position: fixed;
+  z-index: 3;
+  height: 100%;
+}
+
+#menu-pill {
+  margin-left: 1rem;
+  z-index: 3;
+  flex-direction: column;
+}
+
+#menu-pill .nav-link {
+  --bs-navbar-active-color: var(--ed-theme-400);
+  --bs-navbar-hover-color: var(--ed-theme-200);
+  --bs-nav-link-hover-color: var(--ed-theme-300);
+
+  display: flex;
+  align-items: center;
+  max-width: 36px;
+  padding: 0;
+
+  transition: max-width .25s ease-in;
+}
+
+#menu-pill .icon-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: .5rem;
+}
+
+#menu-pill .menu-label {
+  max-width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: .5rem 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 2rem 2rem 0;
+  transition: max-width .25s ease-in-out,
+  padding-left .25s ease-in-out,
+  padding-right .25s ease-in-out;
+}
+
+/* Apply when we are ___ px or lower */
+@media(max-width: 761.98px) {
+  #menu-pill-container {
+    top: 0;
+    height: 4rem;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  #menu-pill {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #menu-pill .menu-label {
+    display: none;
+  }
+
+  .nav-tooltip {
+    --bs-tooltip-color: var(--ed-theme-200);
+    --bs-tooltip-opacity: 0.7;
+  }
+
+  #menu-pill>.nav-item:nth-child(1) .icon-container {
+    border-radius: 50% 0 0 50%;
+  }
+
+  #menu-pill>.nav-item:nth-last-child(1) .icon-container {
+    border-radius: 0 50% 50% 0;
+  }
+}
+
+/* Apply when we are ___ px or higher */
+@media(min-width: 768px) {
+  .nav-tooltip {
+    display: none;
+  }
+
+  .section-page {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  #menu-pill .nav-link:hover,
+  #menu-pill .nav-link.active {
+    max-width: 300px;
+  }
+
+  #menu-pill .nav-link:hover .menu-label,
+  #menu-pill .nav-link.active .menu-label {
+    max-width: 100%;
+    padding-right: 1rem;
+    color: var(--ed-theme-200);
+  }
+
+  #menu-pill > .nav-item:nth-child(1) .icon-container{
+    border-radius:50% 50% 0 0;
+    transition: border-radius .1s ease-out .25s;
+  }
+  
+  #menu-pill > .nav-item:nth-last-child(1) .icon-container{
+    border-radius: 0 0 50% 50%;
+    transition: border-radius .1s ease-out .25s;
+  }
+
+  #menu-pill > .nav-item:nth-last-child(1) > .nav-link:hover .icon-container,
+  #menu-pill > .nav-item:nth-last-child(1) > .nav-link.active .icon-container{
+    border-radius: 0 0 0 50%;
+    transition: border-radius 0s ease-in-out 0s;
+  }
+
+  
+  #menu-pill > .nav-item:nth-child(1) > .nav-link:hover .icon-container,
+  #menu-pill > .nav-item:nth-child(1) > .nav-link.active .icon-container{
+    border-radius: 50% 0 0 0;
+    transition: border-radius 0s ease-in-out 0s;
+  
+}
+}

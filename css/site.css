@@ -475,8 +475,8 @@ section {
 
 /* em is relative to its parent size & rem is relative to the document size */
 .main-logo {
-  height: 25em;
-  padding-left: .08em;;
+  height: 15em;
+
 }
 
 .main-title,

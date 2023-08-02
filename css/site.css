@@ -453,6 +453,7 @@ section {
 /* END: Element Overrides */
 
 /*BEGIN: HOME Section*/
+
 #home {
   background-color: var(--ed-theme-900);
   background-image: url(/img/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg);
@@ -464,6 +465,10 @@ section {
 
 #home-cover {
   backdrop-filter: brightness(0.55) blur(1px);
+  /* backdrop filter for Safari */
+  -webkit-backdrop-filter: brightness(0.35) blur(3px);
+  /* backdrop filter for other browsers */
+  backdrop-filter: brightness(0.35) blur(3px);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -511,7 +516,8 @@ section {
 }
 
 .section-page:nth-child(even),
-.section-page:nth-child(even)>.container::after { /** Divier colors **/
+.section-page:nth-child(even)>.container::after {
+  /** Divier colors **/
   background-color: var(--ed-theme-100);
 }
 
@@ -529,15 +535,16 @@ section {
   right: 0;
   height: 3rem;
   /* clip-path: ellipse(50% 100% at top center); */
-  z-index:1;
+  z-index: 1;
 }
 
-.section-page:nth-child(even)>.container::after{
+.section-page:nth-child(even)>.container::after {
   clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
 }
- .section-page:nth-child(odd)>.container::after{
+
+.section-page:nth-child(odd)>.container::after {
   clip-path: polygon(100% 100%, 100% 0%, 0% 0%);
- }
+}
 
 /*END: Main Content */
 

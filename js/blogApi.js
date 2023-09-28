@@ -1,7 +1,7 @@
 function fetchBlogData() {
     const baseUrl = 'https://edev.up.railway.app';
 
-    fetch(`${baseUrl}/api/BlogPosts/3`)
+    fetch(`${baseUrl}/api/BlogPosts/4`)
         .then((res) => res.json())
         .then(function (data) {
             displayBlogData(data, baseUrl);

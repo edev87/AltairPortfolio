@@ -1,7 +1,7 @@
 function fetchBlogData() {
-    const baseUrl = 'https://edev.up.railway.app';
+    const baseUrl = 'https://edev-notary.up.railway.app/';
 
-    fetch(`${baseUrl}/api/BlogPosts/4`)
+    fetch(`${baseUrl}api/BlogPosts/4`)
         .then((res) => res.json())
         .then(function (data) {
             displayBlogData(data, baseUrl);
@@ -18,9 +18,9 @@ function displayBlogData(blogPosts, baseUrl) {
         let imageDiv = blogPostCard.querySelector('[data-blog="imageLink"]');
         imageDiv.setAttribute(
             "href",
-            `${baseUrl}/content/${blogPost.slug}`
+            `${baseUrl}content/${blogPost.slug}`
         );
-        imageDiv.href = `${baseUrl}/content/${blogPost.slug}`;
+        imageDiv.href = `${baseUrl}content/${blogPost.slug}`;
 
         let imgTag = document.createElement('img');
         imgTag.setAttribute(
@@ -55,7 +55,7 @@ function displayBlogData(blogPosts, baseUrl) {
         let blogLink = blogPostCard.querySelector('[data-blog="readMoreLink"]');
         blogLink.setAttribute(
             "href",
-            `${baseUrl}/content/${blogPost.slug}`
+            `${baseUrl}content/${blogPost.slug}`
         );
 
         let blogPubDate = blogPostCard.querySelector('[data-blog="publishedDate"]');
